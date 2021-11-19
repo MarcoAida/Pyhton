@@ -18,4 +18,4 @@ for line in my_file:
         
         my_fun(values)
 
-print("Somma: {}" .format(my_fun(values )))
+print("Somma: {}" .format (my_fun(values)) )
