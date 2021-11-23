@@ -1,4 +1,5 @@
 class CSVFile():
+
     def __init__(self, name):
         self.name = name
 
@@ -6,15 +7,15 @@ class CSVFile():
         my_file = open(self.name, 'r')
 
         for line in my_file:
-            elements = line.split(',')
-    
-            if elements [0] != 'Date':
-                my_file.append(elements)
+            element = line.split(',')
 
-        return my_file
+            if element [0] != 'Date':
+                my_file.append(element)
+
+            return(element)
 
 shampooFile = CSVFile('shampoo_sales_.txt')
 shampoo = shampooFile.get_data()
 
-for name in my_file:
-    print(my_file)
+for line in range(40):
+    print(shampoo)
