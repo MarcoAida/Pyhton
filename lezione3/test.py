@@ -1,5 +1,5 @@
 values = []
-my_file = open('shampoo_sales.txt', 'r')
+my_file = open('shampoo_sales_.txt', 'r')
 
 def my_fun(values):
     sum = 0;
