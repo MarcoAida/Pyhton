@@ -7,7 +7,6 @@ class NumericalCSVFile():
     def get_data(self):
         my_file = open(self.name, 'r')
         my_list = []
-        values = []
 
         for line in my_file:
             element = line.split(',')
@@ -17,7 +16,15 @@ class NumericalCSVFile():
                 value = element [1]
 
                 try:
-                    values.append(float(value))
+                    my_list.append(float(value))
+
+                except ValueError:
+                    print('Non posso convertire un simbolo a valore numerico !!')
+                    print('Ho avuto un errore di Valore. "values" ere un simbolo.')
+
+                except TypeError:
+                    print('Non posso convertire un simbolo a valore numerico !!')
+                    print('Ho avuto un errore di Tipo. "values" ere un simbolo.')
                     
                 except Exception as e:
                     print('Non ho trovato il file.. {}' .format(e))
