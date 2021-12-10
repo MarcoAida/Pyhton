@@ -1,0 +1,4 @@
+Date,Sales
+settembre,50.0
+ottobre,52.0
+novembre,60.0
