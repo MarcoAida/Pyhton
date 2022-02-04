@@ -1,0 +1,95 @@
+Stato,Citta'
+Spagna,Granada☆☆
+Grecia,Atene☆☆☆
+Danimarca,Copenaghen ☆
+Francia,Nancy 
+Francia,Reims
+Paesi Bassi,Amsterdam ☆☆☆
+Croazia,Dubrovnik ☆☆
+Francia,Arles
+Spagna,Segovia ☆
+Francia,Chartes
+Spagna,Cordoba ☆
+Inghilterra,Nottingham ☆
+Germania,Colonia ☆☆
+Inghilterra,Leeds ☆
+Germania,Hannover
+Belgio,Anversa ☆
+Spagna,Malaga ☆☆
+Slovacchia,Bratislava ☆
+Estonia,Tallinn ☆
+Finlandia,Helsinki ☆
+Inghilterra,Leicester
+Francia,Lione ☆
+Spagna,Murcia ☆☆
+Inghilterra,Sheffield
+Repubblica Ceca,Praga ☆☆☆
+Portogallo,Lisbona ☆☆☆
+Spagna,Valencia ☆☆☆
+Ungheria,Budapest ☆☆
+Repubblica Ceca,Brno
+Germania,Dusseldorf
+Paesi Bassi,The Hague 
+Paesi Bassi,Rotterdam ☆☆
+Germania,Monaco
+Inghilterra,Edimburgo
+Irlanda,Dublino ☆
+Polonia,Varsavia ☆☆
+Francia,Tolosa
+Germania,Stoccarda
+Germania,Essen
+Spagna,Saragozza ☆☆
+Croazia,Zagabria ☆
+Germania,Francoforte☆
+Svezia,Stoccolma
+Spagna,Palma ☆
+Polonia,Breslavia ☆☆
+Germania,Amburgo
+Inghilterra,Bristol
+Polonia,Cracovia ☆
+Romania,Bucarest ☆
+Germania,Brema
+Lituania,Vilnius
+Spagna,Siviglia ☆☆
+Polonia,Poznan ☆
+Lettonia,Riga
+
+
+Grecia,Atene ☆☆☆
+Paesi Bassi,Amsterdam ☆☆☆
+Repubblica Ceca,Praga ☆☆☆
+Portogallo,Lisbona ☆☆☆
+Spagna,Valencia ☆☆☆
+
+
+Spagna,Granada ☆☆
+Croazia,Dubrovnik ☆☆
+Germania,Colonia ☆☆
+Spagna,Malaga ☆☆
+Spagna,Murcia ☆☆
+Ungheria,Budapest ☆☆
+Paesi Bassi,Rotterdam ☆☆
+Polonia,Varsavia ☆☆
+Spagna,Saragozza ☆☆
+Polonia,Breslavia ☆☆
+Spagna,Siviglia ☆☆
+
+
+Russia,St.Pietroburgo ☆
+Danimarca,Copenaghen ☆
+Spagna,Segovia ☆
+Spagna,Cordoba ☆
+Inghilterra,Nottingham ☆
+Inghilterra,Leeds ☆
+Belgio,Anversa ☆
+Slovacchia,Bratislava ☆
+Estonia,Tallinn ☆
+Finlandia,Helsinki ☆
+Francia,Lione ☆
+Irlanda,Dublino ☆
+Croazia,Zagabria ☆
+Germania,Francoforte☆
+Spagna,Palma ☆
+Polonia,Cracovia ☆
+Romania,Bucarest ☆
+Polonia,Poznan ☆
