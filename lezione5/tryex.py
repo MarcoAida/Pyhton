@@ -12,11 +12,11 @@ class CSVFile():
     def get_data(self):
         my_list = []
 
-        try:
-            my_file = open('shampoo_sal.txt', 'r')
+        #try:
+         #   my_file = open('shampoo_sal.txt', 'r')
 
-        except Exception as e:
-            print('Non ho trovato il file.. {}' .format(e))
+      #  except Exception as e:
+       #     print('Non ho trovato il file.. {}' .format(e))
 
         for line in my_file:
             element = line.split(',')

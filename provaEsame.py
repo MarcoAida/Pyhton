@@ -23,7 +23,8 @@ class MovingAverage():
             if i < self.window:
                 continue
             else:
-                myavglist.append(sum(mylist[i - self.window:i])/self.window) 
+                myavglist.append(sum(mylist[i - self.window:i])/self.window)
+                
         return myavglist
 
 class Diff():
