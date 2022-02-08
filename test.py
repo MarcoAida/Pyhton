@@ -4,11 +4,8 @@ class ExamException(Exception):
     # raise ExamException('Errore, ...')
 
 
-my_data = open('testdata.csv', 'r')
-my_list = []
-
 def compute_avg_monthly_difference(time_series, first_year, last_year):
-    
+     
     if not isinstance(time_series, list):
         raise ExamException('Invalid type, only list supported. Got "{}"'.format(type(time_series)))
 
@@ -16,22 +13,33 @@ def compute_avg_monthly_difference(time_series, first_year, last_year):
         raise ExamException('Negative or zero value provided')
 
     if not isinstance(first_year, str):
-        raise ExamException('Invalid type, only string supported. Got "{}"'.format(type(first_year)))
+        #raise ExamException('Invalid type, only string supported. Got "{}"'.format(type(first_year)))
+        first_year == '1949'
 
     if first_year == None:
-        raise ExamException('Negative or zero value provided')
+        #raise ExamException('Negative or zero value provided')
+        first_year == '1949'
+    
+    if int(first_year) < 1949 or int(first_year) > 1959:
+        raise ExamException('first_year must be between 1949 and 1959')
 
     if not isinstance(last_year, str):
-        raise ExamException('Invalid type, only string supported. Got "{}"'.format(type(last_year)))
+        #raise ExamException('Invalid type, only string supported. Got "{}"'.format(type(last_year)))
+        last_year == '1951'
 
     if last_year == None:
-        raise ExamException('Negative or zero value provided')
+        #raise ExamException('Negative or zero value provided')
+        last_year == '1951'
+    
+    if int(last_year) < 1950 or int(last_year) > 1960:
+        raise ExamException('first_year must be between 1950 and 1960')
 
-    if last_year < first_year:
+    if last_year <= first_year:
         raise ExamException('As number last_year must be bigger than first_year')
 
-    myavglist = []
 
+    myavglist = []
+    my_data = open('testdata.csv', 'r')
     diff = (int(last_year) - int(first_year) ) + 1
     #print(diff)
 
@@ -47,51 +55,6 @@ def compute_avg_monthly_difference(time_series, first_year, last_year):
     y10 = []
     y11 = []
     y12 = []
-
-    for line in my_data:
-        
-        element = line.split(',')
-        element[1] = element[1].strip()
-
-        elements = line.split('-')
-
-        if element[0] != 'date':
-        
-            if elements[0] == '1949':
-                y1.append(element[1])
-            
-            if elements[0] == '1950':
-                y2.append(element[1])
-
-            if elements[0] == '1951':
-                y3.append(element[1])
-
-            if elements[0] == '1952':
-                y4.append(element[1])
-
-            if elements[0] == '1953':
-                y5.append(element[1])
-                
-            if elements[0] == '1954':
-                y6.append(element[1])
-                
-            if elements[0] == '1955':
-                y7.append(element[1])
-
-            if elements[0] == '1956':
-                y8.append(element[1])
-
-            if elements[0] == '1957':
-                y9.append(element[1])
-
-            if elements[0] == '1958':
-                y10.append(element[1])
-
-            if elements[0] == '1959':
-                y11.append(element[1])
-
-            if elements[0] == '1960':
-                y12.append(element[1])
 
     #print("1949: {}" .format(y1))
     #print("1950: {}" .format(y2))
@@ -119,7 +82,6 @@ def compute_avg_monthly_difference(time_series, first_year, last_year):
     s10 = 0
     s11 = 0
     
-
     for line in my_data:
 
         #passengers  1949-01 element[0]   ,   112 element[1]
@@ -127,21 +89,25 @@ def compute_avg_monthly_difference(time_series, first_year, last_year):
         element = line.split(',')     
         element[1] = element[1].strip()
 
-        if element[1] == int:
-            raise ExamException('Invalid type, only int supported. Got "{}"'.format(type(element[1])))
+        if element[1] != int:
+            #raise ExamException('Invalid type, only int supported. Got "{}"'.format(type(element[1])))
+            isinstance(element[1], int)
         
         if element[1] == None:
-            raise ExamException('Negative or zero value provided')
+            #raise ExamException('Negative or zero value provided')
+            isinstance(element[1], int)
 
         #year   1949 elements[0]   -   01,112 elements[1]
 
         elements = line.split('-') 
 
-        if elements[0] == int:
-            raise ExamException('Invalid type, only int supported. Got "{}"'.format(type(elements[0])))
+        if elements[0] != int:
+            #raise ExamException('Invalid type, only int supported. Got "{}"'.format(type(elements[0])))
+            isinstance(elements[0], int)
 
         if elements[0] == None:
-            raise ExamException('Negative or zero value provided')
+            #raise ExamException('Negative or zero value provided')
+            isinstance(elements[0], int)
 
         if element[0] != 'date':
         
@@ -182,9 +148,9 @@ def compute_avg_monthly_difference(time_series, first_year, last_year):
                 y12.append(element[1])
 
         #if elements[0] >= first_year and elements[0] <= last_year:
-            
+        
     for i in range(0, 12):
-            
+        
         s1 = (int(y2[i]) - int(y1[i]) )     #50-49
 
         s2 = (int(y3[i]) - int(y2[i]) )     #51-50
@@ -206,12 +172,15 @@ def compute_avg_monthly_difference(time_series, first_year, last_year):
         s10 = (int(y11[i]) - int(y10[i]) )    #59-58
 
         s11 = (int(y12[i]) - int(y11[i]) )    #60-59
-        
+
         s = ( (s1 + s2) / 2 )
 
-        myavglist.append(s)
+        if ( int(y1[i]) == 0 or int(y2[i]) == 0 or int(y3[i]) == 0 or int(y4[i]) == 0 or int(y5[i]) == 0 or int(y6[i]) == 0 or int(y7[i]) == 0 or int(y8[i]) == 0 or int(y9[i]) == 0 or int(y10[i]) == 0 or int(y11[i]) == 0 or int(y12[i]) == 0 ) and diff < 3:
+            i = i + 1
+            s = 0
 
-          
+        myavglist.append(s)
+        
     return myavglist
 
 
@@ -230,7 +199,6 @@ class CSVTimeSeriesFile():
             self.can_read = False
             print('Errore in apertura del file: "{}"'.format(e))
         
-        #my_file = open(self.name, 'r')
         my_list = []
 
         for line in my_file:
@@ -249,17 +217,13 @@ time_series_file = CSVTimeSeriesFile(name = 'testdata.csv')
 
 time_series = time_series_file.get_data()
 
+x = compute_avg_monthly_difference(time_series, "1949", "1951")
+
+
 #print(time_series)
 
-#print("{}" .format(compute_avg_monthly_difference(time_series, 1949, 1950)) )
 print('\n')
 
-x = compute_avg_monthly_difference(time_series, "1949", "1951")
-#y = compute_avg_monthly_difference(time_series, "1953", "1956")
-#z = compute_avg_monthly_difference(time_series, "1955", "1958")
-
 print(x)
-#print(y)
-#print(z)
 
 print('\n')
