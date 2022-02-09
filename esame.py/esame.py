@@ -5,7 +5,7 @@ class ExamException(Exception):
 
 
 def compute_avg_monthly_difference(time_series, first_year, last_year):
-     
+    
     if not isinstance(time_series, list):
         raise ExamException('Invalid type, only list supported. Got "{}"'.format(type(time_series)))
 
@@ -41,7 +41,7 @@ def compute_avg_monthly_difference(time_series, first_year, last_year):
 
     myavglist = []
     mylist = []
-    my_data = open('testdata.csv', 'r')
+    my_data = open('data.csv', 'r')
     diff = (int(last_year) - int(first_year) ) + 1
     #print(diff)
 
@@ -151,8 +151,6 @@ def compute_avg_monthly_difference(time_series, first_year, last_year):
     
     mylist.append(y1 + y2 + y3 + y4 + y5 + y6 + y7 + y8 + y9 + y10 + y11 + y12)
     #print(mylist)
-
-        #if elements[0] >= first_year and elements[0] <= last_year:
     
     for i in range(0, 12):
         
@@ -224,17 +222,17 @@ class CSVTimeSeriesFile():
         return(my_list)
 
 
-time_series_file = CSVTimeSeriesFile(name = 'testdata.csv')
+time_series_file = CSVTimeSeriesFile(name = 'data.csv')
 
 time_series = time_series_file.get_data()
 
-x = compute_avg_monthly_difference(time_series,"1949", "1951")
 
+#x = compute_avg_monthly_difference(time_series,"1949", "1951")
 
 #print(time_series)
 
-print('\n')
+#print('\n')
 
-print(x)
+#print(x)
 
-print('\n')
+#print('\n')
