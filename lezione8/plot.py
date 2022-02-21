@@ -1,4 +1,3 @@
-
 class Model():
 
     def fit(self, data):
@@ -153,8 +152,9 @@ for model in models:
     print('Average error: "{}"\n'.format(error))
 
     # Plotto se richiesto
-    if plot:
-        from matplotlib import  pyplot
-        pyplot.plot(shampoo_sales[0:cutoff_month] + predictions, color='tab:red')
-        pyplot.plot(shampoo_sales, color='tab:blue')
-        pyplot.show()
+    #if plot:
+    from matplotlib import pyplot as plt
+
+    plt.plot(shampoo_sales[0:cutoff_month] + predictions, color='tab:red')
+    plt.plot(shampoo_sales, color='tab:blue')
+    plt.show()
