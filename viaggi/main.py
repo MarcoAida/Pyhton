@@ -1,33 +1,30 @@
-class SearchCity():
-    
-    def __init__(self, name):
+class SearchCity:
 
-        self.name = name
+    def __init__(self, filename):
 
-    def get_data(self, dim):
+        self.filename = filename
 
-        my_file = open(self.name, 'r')
-        my_list = []
-        i = 0
-        flag = 0
+    def get_data(self, city_name):
 
-        for line in my_file:
+        with open(self.filename, 'r') as file:
 
-            element = line.split(',')
+            for line in file:
+                elements = line.strip().split(',')
 
-        #if element [0] != 'Stato':
+                if len(elements) > 1 and elements[1] == city_name:
+                    return True
 
-        while i < dim and flag:
-            
-            if element [1] == 'Praga':
-                flag = 1
-                print(flag)
-            break
-            i = i + 1
-            
-        return flag
+        return False
 
-cityFile = SearchCity('viaggi.txt')
-city = cityFile.get_data(55)
 
-print(city)
+if __name__ == "__main__":
+
+    city_search = SearchCity('viaggi.txt')
+
+    #insert name of city to find
+    print('City to find: ')
+    city_input = input().lower
+
+    city_found = city_search.get_data(city_input().capitalize())
+
+    print(city_found)
