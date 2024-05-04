@@ -14,27 +14,35 @@
 
 myfile = open("in.txt", "r")
 
-l = myfile.readline()
+lines = myfile.readline().strip().split("X")
 
-l = l.split("X")
+len_row = int(lines[0])
 
-print(l)
+len_col = int(lines[1])
 
-#for i in myfile:
-#l = myfile.readline()
-#print(l)
+filter_lines = []
 
-#for line in myfile:
-#for i in l:
-#if line[0] == "0":
-#l.remove(line)
+for line in myfile:
+    if line[0] != "0":
+        filter_lines.append(line)
 
-#for line in myfile:
-#myfile.reverse()
-#myfile = open("out.txt", "w")
+filter_lines.reverse()
+
+len_fil_row = 0
+
+for line in filter_lines:
+    len_fil_row += 1
 
 myfile.flush()
 
 myfile.close()
 
-#if __name__ == "__main__":
+if __name__ == "__main__":
+
+    for line in filter_lines:
+        print(line, end="")
+
+    with open("out.txt", "w") as outfile:
+        outfile.write(str(len_fil_row) + "X" + str(len_col) + "\n")
+        for line in filter_lines:
+            outfile.write(line)
