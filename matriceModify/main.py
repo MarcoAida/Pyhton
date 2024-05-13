@@ -23,7 +23,7 @@ len_col = int(lines[1])
 filter_lines = []
 
 for line in myfile:
-    if line[0] != "0":
+    if line[0] != "0" and line[0] != '\n':
         filter_lines.append(line)
 
 filter_lines.reverse()
