@@ -2,7 +2,7 @@ values = []
 my_file = open('shampoo_sales_.txt', 'r')
 
 def my_fun(values):
-    sum = 0;
+    sum = 0
     for i in range(len(values)):
         sum += values[i]
     return sum
@@ -14,7 +14,7 @@ for line in my_file:
     
     #controllo    primi 4
     if(j > 3):
-        break;
+        break
 
     if elements [0] != 'Date':
         date  = elements [0]
