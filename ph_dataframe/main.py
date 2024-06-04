@@ -1,22 +1,23 @@
 import pandas as pd
-import matplot as plt
+import matplotlib.pyplot as plt
 
 
 def read_csv(filename):
     df = pd.read_csv(filename)
 
-    #print(df.tail)
+    #print(df.head)
     return df
 
 
 def extract_pH(filename):
     df = pd.DataFrame(read_csv(filename))
     pH = df['pH']
+    #print(pH.tail)
     pH.describe()
     pH = pH.cumsum()
     pH.plot()
-    #print(pH.tail)
-    return pH
+    plt.show()
+    return pH, pH.describe()
 
 
 if __name__ == "__main__":
