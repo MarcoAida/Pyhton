@@ -1,11 +1,11 @@
 entrypoint = "main.py"
-modules = ["python-3.10:v18-20230807-322e88b"]
+modules = ["python-3.12"]
 
 [unitTest]
 language = "python3"
 
 [nix]
-channel = "stable-23_05"
+channel = "stable-23_11"
 
 [gitHubImport]
 requiredFiles = [".replit", "replit.nix"]
