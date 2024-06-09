@@ -1,5 +1,5 @@
-entrypoint = "main.py"
 modules = ["python-3.12"]
+run = "1"
 
 [unitTest]
 language = "python3"
@@ -11,5 +11,5 @@ channel = "stable-23_11"
 requiredFiles = [".replit", "replit.nix"]
 
 [deployment]
-run = ["python3", "main.py"]
+run = ["sh", "-c", "1"]
 deploymentTarget = "cloudrun"
