@@ -32,5 +32,6 @@ def print_dir(filename):
 
 
 if __name__ == "__main__":
+
     file = 'esempio1.txt'
     print('file {}:'.format(file), print_dir(file))
