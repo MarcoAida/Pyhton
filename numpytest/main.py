@@ -38,7 +38,7 @@ i = np.eye(3)
 
 print(i)
 
-print(i.astype)
+print(i.astype('float64'))
 
 print(i.astype(bool))
 
